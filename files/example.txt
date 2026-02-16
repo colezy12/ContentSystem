@@ -1,0 +1,2 @@
+This is an example file showing how files are stored in the repository.
+Each uploaded file gets a random ID and is stored in this directory.

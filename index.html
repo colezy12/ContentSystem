@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upload and share files with random links - Bypass Discord's 10MB limit">
+    <title>ContentSystem - File Upload</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ContentSystem</h1>
+            <p class="subtitle">Upload files and get shareable links - Perfect for Discord</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-box" id="uploadBox">
+                    <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+                    </svg>
+                    <h2>Drop files here or click to upload</h2>
+                    <p>Images, videos, and other files supported</p>
+                    <input type="file" id="fileInput" multiple accept="*/*">
+                </div>
+
+                <div class="settings">
+                    <label for="tokenInput">GitHub Personal Access Token:</label>
+                    <input type="password" id="tokenInput" placeholder="ghp_xxxxxxxxxxxx">
+                    <small>Required to upload files. <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">Generate token</a></small>
+                </div>
+
+                <button id="uploadBtn" class="btn btn-primary" disabled>Upload Files</button>
+            </div>
+
+            <div class="progress-section" id="progressSection" style="display: none;">
+                <h3>Upload Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Uploading...</p>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h3>Upload Complete!</h3>
+                <div id="resultsList"></div>
+            </div>
+
+            <div class="recent-uploads" id="recentUploads">
+                <h3>Recent Uploads</h3>
+                <div id="recentList"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Built for bypassing Discord's 10MB limit | <a href="guide.html">How to Use</a> | <a href="https://github.com/colezy12/ContentSystem" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
