@@ -3,6 +3,7 @@ const GITHUB_OWNER = 'colezy12';
 const GITHUB_REPO = 'ContentSystem';
 const GITHUB_BRANCH = 'main';
 const FILES_PATH = 'files';
+const BASE_URL = 'https://colezy12.github.io/ContentSystem';
 
 // State
 let selectedFiles = [];
@@ -131,7 +132,7 @@ async function uploadToGitHub(file, randomId) {
     const response = await fetch(url, {
         method: 'PUT',
         headers: {
-            'Authorization': `token ${githubToken}`,
+            'Authorization': `Bearer ${githubToken}`,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -153,7 +154,7 @@ async function uploadToGitHub(file, randomId) {
         originalName: file.name,
         size: file.size,
         url: data.content.download_url,
-        viewUrl: `${window.location.origin}/view.html?id=${randomId}`
+        viewUrl: `${BASE_URL}/view.html?id=${randomId}`
     };
 }
 

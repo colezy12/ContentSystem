@@ -133,6 +133,7 @@ function createPreview(url, extension) {
         const audio = document.createElement('audio');
         audio.src = url;
         audio.controls = true;
+        audio.autoplay = false;
         filePreview.appendChild(audio);
     } else {
         filePreview.innerHTML = `

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - ContentSystem</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .guide-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .guide-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .guide-content h2 {
+            color: #667eea;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .guide-content h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .guide-content p {
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .guide-content ol,
+        .guide-content ul {
+            line-height: 1.8;
+            color: #333;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .guide-content code {
+            background: #f8f9ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+        }
+
+        .guide-content .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .guide-content .warning {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .screenshot {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="guide-container">
+        <div class="guide-content">
+            <h1>How to Use ContentSystem</h1>
+            <p>A comprehensive guide to uploading and sharing files with ContentSystem</p>
+
+            <h2>📋 Quick Start</h2>
+            <ol>
+                <li>Generate a GitHub Personal Access Token</li>
+                <li>Paste the token in the upload page</li>
+                <li>Upload your files</li>
+                <li>Share the generated links!</li>
+            </ol>
+
+            <h2>🔑 Step 1: Generate GitHub Token</h2>
+            <p>To upload files, you need a GitHub Personal Access Token with <code>repo</code> scope:</p>
+            <ol>
+                <li>Go to <a href="https://github.com/settings/tokens/new?scopes=repo" target="_blank">GitHub Token Settings</a></li>
+                <li>Name your token (e.g., "ContentSystem Uploader")</li>
+                <li>Select the <code>repo</code> scope</li>
+                <li>Click "Generate token"</li>
+                <li>Copy the token (it starts with <code>ghp_</code>)</li>
+            </ol>
+            
+            <div class="warning">
+                <strong>⚠️ Important:</strong> Keep your token secure! Don't share it with others. Your browser stores it locally, so you only need to enter it once.
+            </div>
+
+            <h2>📤 Step 2: Upload Files</h2>
+            <h3>Using the Upload Interface</h3>
+            <ol>
+                <li>Paste your GitHub token in the "GitHub Personal Access Token" field</li>
+                <li>Click the upload box or drag and drop your files</li>
+                <li>Select one or multiple files</li>
+                <li>Click "Upload Files"</li>
+                <li>Wait for the upload to complete</li>
+            </ol>
+
+            <h3>Supported File Types</h3>
+            <ul>
+                <li><strong>Images:</strong> JPG, PNG, GIF, WebP, SVG, etc.</li>
+                <li><strong>Videos:</strong> MP4, WebM, MOV, AVI, etc.</li>
+                <li><strong>Audio:</strong> MP3, WAV, OGG, etc.</li>
+                <li><strong>Documents:</strong> PDF, ZIP, TXT, and more</li>
+            </ul>
+
+            <h2>🔗 Step 3: Share Links</h2>
+            <p>After uploading, you'll get two types of links:</p>
+            
+            <h3>1. View Link</h3>
+            <p>Format: <code>https://colezy12.github.io/ContentSystem/view.html?id=XXXXXXXX</code></p>
+            <ul>
+                <li>Shows a preview of the file</li>
+                <li>Includes file information</li>
+                <li>Has download buttons</li>
+                <li>Great for sharing with users</li>
+            </ul>
+
+            <h3>2. Direct Link</h3>
+            <p>Format: <code>https://raw.githubusercontent.com/.../files/XXXXXXXX.ext</code></p>
+            <ul>
+                <li>Direct access to the file</li>
+                <li>Best for Discord embeds</li>
+                <li>Works for direct downloads</li>
+                <li>Can be used in HTML <code>&lt;img&gt;</code> and <code>&lt;video&gt;</code> tags</li>
+            </ul>
+
+            <h2>💬 Discord Integration</h2>
+            <p>To embed your files in Discord:</p>
+            <ol>
+                <li>Copy the <strong>Direct Link</strong> (not the View Link)</li>
+                <li>Paste it directly in your Discord message</li>
+                <li>Discord will automatically embed images and videos</li>
+            </ol>
+
+            <div class="note">
+                <strong>💡 Tip:</strong> The direct link must end with the file extension (e.g., <code>.png</code>, <code>.mp4</code>) for Discord to embed it properly.
+            </div>
+
+            <h2>📊 Recent Uploads</h2>
+            <p>Your recent uploads are saved in your browser:</p>
+            <ul>
+                <li>View your upload history</li>
+                <li>Quickly copy links</li>
+                <li>Access previously uploaded files</li>
+                <li>Limited to last 20 uploads</li>
+            </ul>
+
+            <h2>🔒 Privacy & Security</h2>
+            <div class="warning">
+                <strong>⚠️ Important Privacy Information:</strong>
+                <ul style="margin: 10px 0 0 0;">
+                    <li>All uploaded files are stored in a <strong>public GitHub repository</strong></li>
+                    <li>Anyone with the link can access your files</li>
+                    <li>Files are visible on the GitHub repository</li>
+                    <li><strong>Never upload sensitive or private content!</strong></li>
+                    <li>Your GitHub token is stored only in your browser's localStorage</li>
+                </ul>
+            </div>
+
+            <h2>❓ Troubleshooting</h2>
+            
+            <h3>Upload Failed</h3>
+            <ul>
+                <li>Check that your GitHub token is valid</li>
+                <li>Ensure the token has <code>repo</code> scope</li>
+                <li>Try regenerating your token</li>
+                <li>Check your internet connection</li>
+            </ul>
+
+            <h3>File Not Loading</h3>
+            <ul>
+                <li>Verify the file ID in the URL is correct</li>
+                <li>Check that the file exists in the repository</li>
+                <li>Wait a few seconds for GitHub to process the upload</li>
+            </ul>
+
+            <h3>Discord Not Embedding</h3>
+            <ul>
+                <li>Use the <strong>Direct Link</strong>, not the View Link</li>
+                <li>Ensure the link ends with the file extension</li>
+                <li>Some file types may not be supported by Discord</li>
+                <li>Large video files may not embed (Discord has size limits)</li>
+            </ul>
+
+            <h2>📝 Best Practices</h2>
+            <ul>
+                <li>Use descriptive file names before uploading</li>
+                <li>Keep track of your upload links</li>
+                <li>Don't upload copyrighted content without permission</li>
+                <li>Be mindful of file sizes (GitHub has repository size limits)</li>
+                <li>Regularly clean up old files you no longer need</li>
+            </ul>
+
+            <h2>🚀 Ready to Start?</h2>
+            <p>
+                <a href="index.html" class="btn btn-primary" style="display: inline-block; text-decoration: none; margin-top: 20px;">Go to Upload Page</a>
+            </p>
+
+            <footer style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #e0e0e0; text-align: center; color: #666;">
+                <p>Built for bypassing Discord's 10MB limit | <a href="https://github.com/colezy12/ContentSystem" target="_blank">GitHub</a></p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
